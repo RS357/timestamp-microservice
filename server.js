@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+var cors = require('cors');
+
+app.use(cors({optionSuccessStatus: 200})); 
 
 app.get('/api/timestamp/:date_string?', (req, res) => {
     let date
